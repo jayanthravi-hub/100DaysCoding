@@ -1,0 +1,23 @@
+def insert_element(list1,x,y):
+    new_arr = [0]*(len(list1)+1)
+    for i in range(y):
+        new_arr[i] = list1[i]
+
+    new_arr[y] = x
+
+    for i in range(y,len(list1)):
+        new_arr[i+1] = list1[i]
+
+    print(new_arr)
+
+list1 = list(map(int,input().split()))
+x = int(input())
+y = int(input())
+insert_element(list1,x,y)
+
+
+
+
+
+
+
