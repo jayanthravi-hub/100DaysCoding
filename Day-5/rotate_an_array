@@ -1,0 +1,31 @@
+def rotate_left(list1,n):
+    n = n % len(list1)
+
+    rotated = [0] * len(list1)
+
+
+    for i in range(len(list1)):
+        rotated[(i + n) % len(list1)] = list1[i]
+
+    return rotated
+
+list1 = list(map(int,input().split()))
+n = int(input())
+print(rotate_left(list1,n))
+
+# Rotating the list of elements from the right side
+
+def rotate_right(list1,n):
+
+    n = n % len(list1)
+
+    rotated = [0] * len(list1)
+
+    for i in range(len(list1)):
+        rotated[(i + n) % len(list1)] = list1[i]
+
+    return rotated
+
+list1 = list(map(int,input().split()))
+n = int(input())
+print(rotate_right(list,n))
