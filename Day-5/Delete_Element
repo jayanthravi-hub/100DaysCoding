@@ -1,0 +1,14 @@
+def delete_element(list1,x):
+    new_arr = [0] * (len(list1)-1)
+
+    for i in range(x):
+        new_arr[i] = list1[i]
+
+    for i in range(x+1,len(list1)):
+        new_arr[i-1] = list1[i]
+
+    print(new_arr)
+
+list1 = list(map(int,input().split()))
+x = int(input())
+delete_element(list1,x)
